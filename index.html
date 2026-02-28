@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+<a-scene
+  embedded
+  vr-mode-ui="enabled: false"
+  arjs="sourceType: webcam; debugUIEnabled: false;"
+>
+
+  <a-assets>
+    <img id="photo"
+         src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e">
+  </a-assets>
+
+  <a-marker preset="hiro">
+
+    <a-plane
+      src="#photo"
+      position="0 0 0"
+      width="2"
+      height="1.5">
+    </a-plane>
+
+  </a-marker>
+
+  <a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+</html>
